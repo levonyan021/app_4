@@ -1,0 +1,18 @@
+{% load static %}
+<div class="mx-auto position-relative gallery-container">
+    <div class="circle intro-circle-1"></div>
+    <div class="circle intro-circle-2"></div>
+    <div class="mx-auto tm-border-top gallery-slider">
+        {% for el in element %}
+      <figure class="effect-julia item">
+          <img src="{{ el.image.url }}" alt="Image">
+          <figcaption>
+              <div>
+                  <p>{{ el.desc }}</p>
+              </div>
+              <a href="#">View more</a>
+          </figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
